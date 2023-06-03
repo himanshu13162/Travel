@@ -109,8 +109,8 @@ h1,h2,h3{
 }
 .header{
     position: relative;
-    height: 95vh;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../IMAGE/header-image.jpg');
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../IMAGE/2.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: none;
@@ -122,8 +122,20 @@ h1,h2,h3{
 
 .navbar .logo{
     float: left;
-}
+    font-size: 3.5rem;
+    font-weight: 600;
+    background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 
+}
+.logo::after {
+    content: '';
+    display: block;
+    border: 3px solid red;
+    width: 100%;
+}
 .navbar .nav-items{
     float: right;
     margin-top: 1rem;
@@ -217,6 +229,7 @@ h1,h2,h3{
 
 .box-wrapper{
     box-shadow: 5px 5px 20px 0px #00000046;
+    background-color: #263238;
 }
 
 .box{
@@ -227,11 +240,6 @@ h1,h2,h3{
     height: 100%;
 }
 
-.box-wrapper::after{
-    content: '';
-    display: block;
-    clear: both;
-}
 
 .box-1, .box-3{
     background-color: #263238;
@@ -241,6 +249,11 @@ h1,h2,h3{
 .box-2{
     background: linear-gradient(25deg, #d64c7f, #ee4758 50%);
     color: #fff;
+}
+.box-wrapper::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 
@@ -275,7 +288,7 @@ h1,h2,h3{
 /*####################################################### ABOUT WRAPPER STYLING ##########################################################*/
 
 .about-wrapper{
-    margin-left: 15rem;
+    /* margin-left: rem; */
     margin-top: 3rem;
 }
 
@@ -377,5 +390,285 @@ h1,h2,h3{
     content: '';
     display: block;
     clear: both;
+}
+
+/*##################################################### CONTACT PAGE STYLING ##########################################################*/
+
+.contact-form{
+    padding: 1rem 0;
+    background: #f7f7f7;
+}
+
+.form-wrapper{
+    
+}
+.form-wrapper::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.form-wrapper .company-address{
+    background: #fff;
+    width: 49%;
+    float: left;
+    padding: 2rem ;
+}
+
+.form-wrapper .company-address i {
+    display: inline-block;
+    margin-right: 1rem;
+}
+.form-wrapper .company-address h2{
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 0.1rem;
+}
+.form-wrapper .address-group{
+    margin-bottom: 3rem;
+}
+
+.form-wrapper .company-address img{
+    max-width: 95%;
+    min-height: 28rem;
+    object-fit: cover;
+    object-position: right;
+}
+
+/*##################################################### FORM STYLING ##########################################################*/
+
+.form-wrapper .form{
+    height: 620px;
+    font-size: 1.5rem;
+    background: #fff;
+    width: 49%;
+    float: right;
+    padding: 1rem;
+}
+
+.form h1::after{
+    content: '';
+    display: block;
+    border: 3px solid #ee4758;
+    width: 100%;
+}
+
+.form-wrappper label{
+    display: block;
+}
+
+.form-wrapper .form input{
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.form-wrapper .form .form-group{
+    margin-bottom: 1.2rem;
+}
+
+.form-wrapper .form label::after{
+    content: '*';
+    color: #e63946;
+}
+
+.form-wrapper .form textarea{
+    width: 100%;
+    height: 170px;
+    padding: 1rem;
+}
+
+.form-btn{
+    display: block;
+    margin: 0 auto;
+    padding: 0.5em 3em;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    background: #e63946;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* ########################################################## MEDIA QUERY ################################################################*/
+
+
+@media (max-width: 500px) {
+    html {
+        font-size: 50%;
+    }
+
+    .navbar .nav-items,
+    .navbar .logo {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .row{
+        height: auto;
+        width: 100%;
+    }
+
+    .row .img-box,
+    .row .text-box{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .features .box{
+        float: none;
+        width: 100%;
+        text-align: center;
+        box-shadow: 5px 5px 20px 0px #00000046;
+    }
+
+    .features .box2,
+    .features .box3{
+        margin-top: 7rem;
+    }
+
+    .box-wrapper {
+            box-shadow: none;
+    }
+
+    .cta-banner-left,
+    .cta-banner-right{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .count-item {
+        width: 50%;
+        float: clear;
+        text-align: center;
+    }
+
+    .form-wrapper .company-address{
+        float: none;
+        width: 100%;
+        height:auto;
+        margin-bottom: 5rem;
+    }
+
+    .form-wrapper .form{
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 5rem;
+    }
+}
+
+
+@media(min-width: 501px) and (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+
+    .navbar .nav-items,
+    .navbar .logo {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .row {
+        height: auto;
+        width: 100%;
+    }
+
+    .row .img-box,
+    .row .text-box {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .features .box {
+        float: none;
+        width: 100%;
+        text-align: center;
+        box-shadow: 5px 5px 20px 0px #00000046;
+    }
+
+    .features .box2,
+    .features .box3 {
+        margin-top: 7rem;
+    }
+
+    .box-wrapper {
+        box-shadow: none;
+    }
+
+    .cta-banner-left,
+    .cta-banner-right {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .count-item {
+        width: 50%;
+        float: clear;
+        text-align: center;
+    }
+
+    .form-wrapper .company-address {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 5rem;
+    }
+
+    .form-wrapper .form {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 5rem;
+    }
+}
+
+
+@media(min-width: 769px) and (max-width: 1200px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+
+    .row {
+        height: auto;
+        width: 100%;
+    }
+
+    .row .img-box,
+    .row .text-box {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .box-wrapper {
+        box-shadow: none;
+    }
+
+    @media(orientation: landscape) and (max-height:500px){
+        .header{
+            height: 90vmax;
+        }
+    }
+    
+   
 }
 
